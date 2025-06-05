@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "python.defaultInterpreterPath": "python",
+    "files.associations": {
+        "*.java": "java"
+    },
+    "java.configuration.updateBuildConfiguration": "automatic"
+}

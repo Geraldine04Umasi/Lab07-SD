@@ -1,0 +1,57 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile Java",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "-d",
+                "bin",
+                "src/lab07/*.java"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": "$javac"
+        },
+        {
+            "label": "Run SOAP Server",
+            "type": "shell",
+            "command": "java",
+            "args": [
+                "-cp",
+                "bin",
+                "lab07.ProductServicePublisher"
+            ],
+            "dependsOn": "Compile Java",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Run Python Client",
+            "type": "shell",
+            "command": "python",
+            "args": ["cliente/g2.py"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "dedicated"
+            }
+        }
+    ]
+}
